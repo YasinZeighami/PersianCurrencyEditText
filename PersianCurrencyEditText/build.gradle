@@ -42,15 +42,24 @@ dependencies {
 
 afterEvaluate {
     publishing {
+
         publications {
             release(MavenPublication) {
                 from components.release
 
-                groupId = 'com.github.yasinzeighami'
-                artifactId = 'Persian-Currency-EditText'
+                groupId = 'com.github.yasinzeighami' // Replace with your group ID
+                artifactId = 'PersianCurrencyEdittext' // Replace with your artifact ID
                 version = '1.0.0' // Replace with your library version
+
             }
+        }
+        repositories {
+            mavenLocal()
         }
     }
 
+
+
 }
+
+
