@@ -42,24 +42,17 @@ dependencies {
 }
 
 afterEvaluate {
-    publishing {
+    android.libraryVariants.each { variant ->
 
-        publications {
-            release(MavenPublication) {
-                from components.release
+        publishing.publications.create(variant.name, MavenPublication) {
 
-                groupId = 'com.github.yasinzeighami' // Replace with your group ID
-                artifactId = 'PersianCurrencyEdittext' // Replace with your artifact ID
-                version = '1.0.0' // Replace with your library version
+            from components.findByName(variant.name)
 
-            }
-        }
-        repositories {
-            mavenLocal()
+            groupId = 'com.github.yasinzeighami' // Replace with your group ID
+            artifactId = 'PersianCurrencyEdittext' // Replace with your artifact ID
+            version = '1.0.0' // Replace with your library version
         }
     }
-
-
 
 }
 
