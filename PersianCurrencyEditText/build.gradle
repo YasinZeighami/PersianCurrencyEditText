@@ -1,7 +1,8 @@
 plugins {
+    id 'maven-publish'
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'maven-publish'
+
 }
 
 android {
@@ -42,15 +43,21 @@ dependencies {
 }
 
 afterEvaluate {
-    android.libraryVariants.each { variant ->
+    publishing {
 
-        publishing.publications.create(variant.name, MavenPublication) {
 
-            from components.findByName(variant.name)
+        publications {
+            release(MavenPublication) {
+                from components.release
 
-            groupId = 'com.github.yasinzeighami' // Replace with your group ID
-            artifactId = 'PersianCurrencyEdittext' // Replace with your artifact ID
-            version = '1.0.1' // Replace with your library version
+                groupId = 'com.github.yasinzeighami' // Replace with your group ID
+                artifactId = 'PersianCurrencyEdittext' // Replace with your artifact ID
+                version = '1.0.2' // Replace with your library version
+
+            }
+        }
+        repositories {
+            mavenLocal()
         }
     }
 
