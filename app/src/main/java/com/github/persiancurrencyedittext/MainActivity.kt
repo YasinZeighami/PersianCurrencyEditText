@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val persianEdt = findViewById<CurrencyEditText>(R.id.persian_edt)
-        val txt = findViewById<TextView>(R.id.persian_words)
+        val textView = findViewById<TextView>(R.id.persian_words)
 
-        persianEdt.persianWordsTextView(txt)
-        persianEdt.setCurrencyType(CurrencyType.TOMAN)
+        persianEdt.persianWordsTextView(textView)
+        persianEdt.setCurrencyType(CurrencyType.RIAL)
         persianEdt.getNumericValue()
         persianEdt.getPersianNumericValue()
         persianEdt.getWords()
