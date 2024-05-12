@@ -49,7 +49,7 @@ val textView = findViewById<TextView>(R.id.txt)
 // Set TextView for displaying Persian words
 persianEdt.persianWordsTextView(textView)
 
-// Set currency type to Rial
+// Set currency type to Rial or Toman
 persianEdt.setCurrencyType(CurrencyType.RIAL)
 
 
