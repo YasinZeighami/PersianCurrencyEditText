@@ -361,6 +361,7 @@ class CurrencyEditText : AppCompatEditText {
 
         if (tensDigit > BigInteger.ZERO) {
             if (tensDigit == BigInteger.ONE) {
+                // Handle numbers between 10 and 19 directly
                 result.append(units[number.toInt() % 100])
             } else {
                 result.append(tens[tensDigit.toInt()])
@@ -370,12 +371,13 @@ class CurrencyEditText : AppCompatEditText {
             }
         }
 
-        if (unitsDigit > BigInteger.ZERO) {
+        if (unitsDigit > BigInteger.ZERO && tensDigit != BigInteger.ONE) {
             result.append(units[unitsDigit.toInt()])
         }
 
         return result.toString()
     }
+
 
 
     /**
