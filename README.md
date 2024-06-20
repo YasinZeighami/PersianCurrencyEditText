@@ -55,8 +55,6 @@ persianEdt.setCurrencyType(CurrencyType.RIAL)
 
 val numericValue = persianEdt.getNumericValue() // 2000000
 
-val persianNumericValue = persianEdt.getPersianNumericValue() // ۲۰۰۰۰۰۰
-
 val words = persianEdt.getWords() // دو میلیون ریال
 
 val value = persianEdt.getValue() // ۲,۰۰۰,۰۰۰
