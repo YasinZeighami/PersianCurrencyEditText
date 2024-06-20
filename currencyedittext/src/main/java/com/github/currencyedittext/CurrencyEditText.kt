@@ -193,20 +193,7 @@ class CurrencyEditText : AppCompatEditText {
         return numericText.toLongOrNull() ?: 0
     }
 
-    /**
-     * Get the numeric value as a Persian formatted String.
-     */
-    /**
-     * Retrieves the Persian numeric value from the text of the EditText and converts it to a Persian numeral string.
-     * This function converts the numeric value obtained from [getNumericValue] to a Persian numeral string using [convertEnNumberToPersianNumber].
-     *
-     * @return The Persian numeral string representing the numeric value extracted from the text of the EditText.
-     */
-    fun getPersianNumericValue(): String {
-        // Convert the numeric value to Persian numerals
-        val convertToFaNumber = convertEnNumberToPersianNumber(getNumericValue().toString())
-        return convertToFaNumber
-    }
+
 
 
     /**
@@ -390,16 +377,6 @@ class CurrencyEditText : AppCompatEditText {
         monetaryDivider = divider
     }
 
-
-    /**
-     * Retrieves the Persian currency symbol based on the specified currency type.
-     *
-     * @param currencyType The currency type enum (CurrencyType.RIAL for Iranian Rial, CurrencyType.TOMAN for Iranian Toman).
-     * @return The Persian currency symbol corresponding to the specified currency type.
-     */
-    private fun getPersianCurrency(currencyType: CurrencyType): String {
-        return currencyType.symbol
-    }
 
 
 }

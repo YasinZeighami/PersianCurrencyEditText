@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         persianEdt.persianWordsTextView(textView)
         persianEdt.setCurrencyType(CurrencyType.RIAL)
         persianEdt.getNumericValue()
-        persianEdt.getPersianNumericValue()
         persianEdt.getWords()
         persianEdt.getValue()
         persianEdt.setRialToTomanConversion(false)
